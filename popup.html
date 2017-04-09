@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    body {
+        min-width: 500px;
+        background-image: url(background.png);
+    }
+    input {
+        padding: 3px 6px;
+        margin: 0px;
+    }
+    #result-containter {
+        margin-top: 10px;
+    }
+    #initial_branch_name, #branch_name {
+        width: 360px;
+    }
+    #transform_branch_name, #copy_branch_name  {
+        width: 120px;
+        text-transform: uppercase;
+        padding: 5px 20px;
+    }
+    .logo {
+        float: left;
+    }
+    .logo {
+        float: left;
+    }
+    .logo-text {
+       float: left; 
+       position: relative;
+       top: -10px;
+       left: 10px;
+    }
+
+    .btn {
+      background: #526c75;
+      background-image: -webkit-linear-gradient(top, #526c75, #284852);
+      background-image: -moz-linear-gradient(top, #526c75, #284852);
+      background-image: -ms-linear-gradient(top, #526c75, #284852);
+      background-image: -o-linear-gradient(top, #526c75, #284852);
+      background-image: linear-gradient(to bottom, #526c75, #284852);
+      font-family: Arial;
+      color: #ffffff;
+      text-decoration: none;
+      border: 0px;
+      padding: 5px 9px;
+    }
+
+    .btn:hover {
+      background: #424e52;
+      background-image: -webkit-linear-gradient(top, #424e52, #143540);
+      background-image: -moz-linear-gradient(top, #424e52, #143540);
+      background-image: -ms-linear-gradient(top, #424e52, #143540);
+      background-image: -o-linear-gradient(top, #424e52, #143540);
+      background-image: linear-gradient(to bottom, #424e52, #143540);
+      text-decoration: none;
+    }
+</style>
+<body>
+    <img src="icon.png" width="32" class="logo"><h2 class="logo-text">Git branch naming</h2>
+    <div id="transforn-container">
+        <input id="initial_branch_name" placeholder="Your proposed branch name" type="text" name="initial_branch_name">
+        <button class="btn" id="transform_branch_name" data-clipboard-target="#branch_name">Transform</button>
+    </div>
+    <div id="result-containter">
+        <input id="branch_name" placeholder="Branch name" type="text" name="branch_name">
+        <button class="btn" id="copy_branch_name" data-clipboard-target="#branch_name">Copy</button>
+    </div>
+    <script src="clipboard.min.js"></script>
+    <script type="text/javascript" src="popup_scripts.js"></script>
+</body>
+</html>
